@@ -119,18 +119,6 @@ header .logo-image:hover {
   background-color: ;
   color: white;
 }
-.card {
-  margin: 30px;
-  padding: 20px 40px 40px;
-  max-width: 500px;
-  text-align: left;
-  background: #fff;
-  border-bottom: 4px solid #ccc;
-  border-radius: 6px;
-}
-.card:hover {
-  border-color: orange;
-}
 
 footer {
   width: 100%;
@@ -175,55 +163,21 @@ a.social:hover {
   clear: both;
 }
 
-/* Styles for larger screens */
-@media screen and (min-width: 720px) {
-  
-  .flex {
-      display: flex;
-      max-width: 1200px;
-      justify-content: space-around;
-      margin: 0 auto;
-  }
 
-  header {
-    min-height: 450px;
-  }
-
-  .nav {
+.flex {
+    display: flex;
     max-width: 1200px;
-  }
-
-  .nav .name {
-    display: block;
-    margin-right: auto;
-    color: white;
-  }
-
-  main {
-    padding-top: 50px;
-  }
-
-  main p {
-    line-height: 1.6em;
-  }
-
-  footer {
-    font-size: 1.3em;
-    max-width: 1200px;
-    margin: 40px auto;
-  }
-
+    justify-content: space-between;
+    margin: 20px;
 }
+
+
 
 h3 {
    color: maroon;
    letter-spacing: 0.5px;
 }
 
-
-.gallery{
-   margin: 10px;
-}
 
 h2{ 
   color: #EEE0E5;
@@ -259,8 +213,9 @@ h4{
 footer{ background-color: #CD3333; text-align: left; } 
 
 iframe{
-  margin: 30px;
-  width:  88%;
+  margin: 30px 20px;
+  width:  100%;
+  max-width: 1200px;
   height: 500px;
 }
 
@@ -321,5 +276,3 @@ body {
     font-size: 35px;
     cursor: pointer;
 }
-
-</style>
