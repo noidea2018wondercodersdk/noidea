@@ -1,0 +1,137 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Forno a Lenga Pizzeria</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet"></head>
+  <body>
+
+    <div id="navbar">
+      <a class="active" href="javascript:void(0)">Home</a>
+      <a href="javascript:void(0)">News</a>
+      <a href="javascript:void(0)">Contact</a>
+    </div>
+
+    <header>
+      <img src="pizzalogo.jpg" alt="Pizza logo" class="logo-image">
+      <h1 class="tag name">Forno a Legna Pizzeria</h1>
+      <p class="tag location">Frederiksberg</p>
+    </header>
+    <main class="flex">
+   
+    <div class="gallery">
+      <a href="order.html">
+        <img src="https://smagaarhus.dk/wp-content/uploads/2016/10/pizza-pixabay-700x467.jpg" alt="Cinque Terre" width="200" height="200">
+      </a>
+      <div class="desc">Peperoni</div>
+    </div>
+
+    <div class="gallery">
+       <a href="order.html">
+        <img src="https://smagaarhus.dk/wp-content/uploads/2016/10/pizza-pixabay-700x467.jpg" alt="Forest" width="200" height="200">
+      </a>
+      <div class="desc">Margharita</div>
+    </div>
+
+    <div class="gallery">
+       <a href="order.html">
+        <img src="https://smagaarhus.dk/wp-content/uploads/2016/10/pizza-pixabay-700x467.jpg" alt="Northern Lights" width="200" height="200">
+      </a>
+      <div class="desc">Vegetarian</div>
+    </div>
+
+    <div class="gallery">
+       <a href="order.html">
+        <img src="https://smagaarhus.dk/wp-content/uploads/2016/10/pizza-pixabay-700x467.jpg" alt="Mountains" width="200" height="200">
+      </a>
+      <div class="desc">Mushroom</div>
+ 
+  <div class="row">
+    <div class="column">
+    <a href="order.html">
+    <img src="https://smagaarhus.dk/wp-content/uploads/2016/10/pizza-pixabay-700x467.jpg" alt="Pizza" style="width:100%" onclick="myFunction(this);"></a>
+   </div>
+
+  <div class="column">
+     <a href="order.html">
+    <img src="img_snow.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+  </div></a>
+
+  <div class="column">
+     <a href="order.html">
+    <img src="img_mountains.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+  </div></a>
+
+  <div class="column">
+     <a href="order.html">
+    <img src="img_lights.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+  </div></a>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+}
+</script>
+   
+    </main>
+
+      <div>
+          <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FfornoalegnaKBH%2Fvideos%2F412164118923095%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+      </div>
+
+      <div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.374489389802!2d12.533516515658667!3d55.682476704881545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465253bb1daa3869%3A0xbf305df87e2d1db3!2sForno+a+Legna+Pizzeria!5e0!3m2!1sen!2suk!4v1530891910862" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+
+    <footer>
+ <h2> Authentic Italian Pizza
+ </h2>
+
+<h3>Call: 35 39 50 12</p>
+    11:00 AM - 10:00 PM
+ <img class="facebook" src="facebooklogo.png">
+ </h3>
+
+<h4>
+  <a href="https://www.facebook.com/fornoalegnaKBH/">Facebook</a>
+ 
+</h4>
+
+    <script>
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    </script>
+
+    <footer>
+      <ul>
+        <li><a href="https://www.facebook.com/fornoalegnaKBH/" target="_blank" class="social facebook">Facebook</a></li>
+      </ul>
+      <p class="copyright">Copyright 2018, Forno a Lenga Pizzeria</p>
+    </footer>
+  </body>
+  </html>
