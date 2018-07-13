@@ -45,6 +45,8 @@ a:hover {
   position: fixed;
   top: 0;
   width: 100%;
+
+  z-index: 1;
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
@@ -52,37 +54,6 @@ a:hover {
   padding-top: 60px;
 }
 
-/* Section Styles */
-
-/*
-.main-nav {
-  width: 100%;
-  background: black;
-  min-height: 30px;
-  padding: 10px;
-  position: fixed;
-  text-align: center;
-}
-.nav {
-  display: flex;
-  justify-content: space-around;
-  font-weight: 700;
-  list-style-type: none;
-  margin: 0 auto;
-  padding: 0;
-}
-.nav .name {
-  display: none;
-}
-.nav li {
-  padding: 5px 10px 10px 10px;
-}
-.nav a {
-  transition: all .5s;
-}
-.nav a:hover {
-  color: orange
-} */
 
 header {
   text-align: center;
@@ -229,35 +200,6 @@ body {
     font-family: Arial;
 }
 
-/* The grid: Four equal columns that floats next to each other */
-.column {
-    float: left;
-    width: 25%;
-    padding: 10px;
-}
-
-/* Style the images inside the grid */
-.column img {
-    opacity: 0.8; 
-    cursor: pointer; 
-}
-
-.column img:hover {
-    opacity: 1;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* The expanding image container */
-.container {
-    position: relative;
-    display: none;
-}
 
 /* Expanding image text */
 #imgtext {
@@ -276,4 +218,12 @@ body {
     color: white;
     font-size: 35px;
     cursor: pointer;
+}
+
+.pizza-options {
+  margin-top: 40px;
+}
+
+.gallery {
+  margin-bottom: 20px
 }
