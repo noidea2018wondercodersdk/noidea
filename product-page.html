@@ -34,7 +34,6 @@
 					<img src="pizzaoven.jpg" alt="Pizza picture">
 				</div>
                 
-                <form action="product-page.html" class="tab" method="post" name="f1"> 
 
 
 				<div class="col-12 col-md-6">
@@ -42,9 +41,9 @@
 
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore error reiciendis neque, adipisci perspiciatis dolor in et repudiandae animi placeat deleniti similique officiis velit laborum earum non, alias eligendi architecto dicta tenetur ad. Tempore sit quo illo amet sapiente, accusamus.</p>
 
-					<form action="#">
+	                <form action="product-page.html" class="tab" method="post" name="f1"> 
 						<label for="pizzaSize">Size</label>
-						<select name="pizzaSize" id="pizzaSize">
+						<select name="pizzaSize" id="pizzaSize" onchange="totalPrice()">
 							<option value="small">Small - $5</option>
 							<option value="medium">Medium - $10</option>
 							<option value="large">Large - $15</option>
@@ -54,7 +53,7 @@
 						<br/>
 
 						<label for="pizzaDough">Dough</label>
-						<select name="pizzaDough" id="pizzaDough" onselect="totalPrice()" >
+						<select name="pizzaDough" id="pizzaDough" onchange="totalPrice()" >
 							<option value="deep">Deep pan - $3</option>
 							<option value="italian">Italian - $1</option>
 							<option value="wholemeal">Wholemeal - $5</option>
@@ -98,11 +97,10 @@
 					<button class="btn order-button">Order (total <span class="total-value">$ 8</span>)</button>
 				</div> -->
 
-                <div>
-				<h3>Total</h3>
-				<p><input type="text" name=Total value="0"><br /> </p>
-				<input type="submit" value="submit" /> <input type ="reset">
-				</form>
+                <div class="col-xs-12">
+					<h3>Total</h3>
+					<p><input type="text" name=Total value="0"><br /> </p>
+					<input type="submit" value="submit" /> <input type ="reset">
                 </div>
 
 			</div>
@@ -120,65 +118,8 @@
 			</ul>
 			<p class="copyright">Copyright 2018, Forno a Lenga Pizzeria</p>
 		</footer>
-	  
 
-		<script>
-
-			window.onscroll = function() {myFunction()};
-
-			var navbar = document.getElementById("navbar");
-			var sticky = navbar.offsetTop;
-
-			function myFunction() {
-			  if (window.pageYOffset >= sticky) {
-				navbar.classList.add("sticky")
-			  } else {
-				navbar.classList.remove("sticky");
-			  }
-			}
-
-			function totalPrice() 
-			{
-			    var total = 0;
-			    var small = 5.0;
-			    var medium = 10.0;
-			    var large = 15.0;
-			    var massive = 20.0;
-
-			    // var deep = 3.0;
-			    // var italian= 1.0;
-			    // var wholemeal = 5.0;
-			    // var crisp = 1.0;
-			    // var cheese = 3.0;
-			    // var addTop = 0;
-
-
-
-			    if(document.forms[0].pizzaSize[0].pizzaDough[0].checked == true) {
-			        total += small;
-			    }
-			    else if(document.forms[0].pizzaSize[1].pizzaDough[1].checked == true){
-			        total += medium;
-			    }
-			    else if(document.forms[0].pizzaSize[2].pizzaDough[2].checked == true){
-			        total += large;
-			    }
-			      else if(document.forms[0].pizzaSize[3].pizzaDough[3].checked == true){
-			        total += massive;
-			    }
-			    
-                for(var j=0; j<4; j++){
-				    for(var i = 0; i < 4; i++){
-				        if(document.forms[0].pizzaDough[j].toppingList[i].checked == true){
-				            total += addTop;
-						}
-				    }
-				    document.f1.Total.value = total;
-			}
-		}
-
-		</script>
-
+		<script src="scripts.js"></script>
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
