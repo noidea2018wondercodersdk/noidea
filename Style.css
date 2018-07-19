@@ -5,11 +5,15 @@
 body {
   margin: 0;
   padding: 0;
-  text-align: center;
   font-family: 'Roboto', sans-serif;
   color: #222;
   background: #f7f5f0;
 }
+
+img {
+  width: 100%;
+}
+
 /* Link Styles */
 
 a {
@@ -174,14 +178,6 @@ position: absolute;
     right: 80px;
 }
 
-h4{ 
-
-  text-align: right;
-  position: center;
-
-} 
-
-
 footer{ background-color: #CD3333; text-align: left; } 
 
 iframe{
@@ -226,4 +222,22 @@ body {
 
 .gallery {
   margin-bottom: 20px
+}
+
+
+.product-page {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+label {
+  display: block;
+}
+
+select {
+  width: 230px;
+  height: 35px;
+  border-radius: 0;
+  margin-bottom: 20px;
+  appearance: none;
 }

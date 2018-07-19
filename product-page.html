@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Forno a Lenga Pizzeria</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet"></head>
+  <body>
+
+	<div id="navbar">
+	  <a class="active" href="javascript:void(0)">Home</a>
+	  <a href="javascript:void(0)">News</a>
+	  <a href="javascript:void(0)">Contact</a>
+	</div>
+
+	<header>
+	  <img src="pizzalogo.jpg" alt="Pizza logo" class="logo-image">
+	  <h1 class="tag name">Forno a Legna Pizzeria</h1>
+	  <p class="tag location">Frederiksberg</p>
+	</header>
+
+	<main class="container product-page">
+		<div class="row">
+			<div class="col-12 col-md-6">
+				<img src="pizzaoven.jpg" alt="Pizza picture">
+			</div>
+
+			<div class="col-12 col-md-6">
+				<h4>Banana pizza</h4>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore error reiciendis neque, adipisci perspiciatis dolor in et repudiandae animi placeat deleniti similique officiis velit laborum earum non, alias eligendi architecto dicta tenetur ad. Tempore sit quo illo amet sapiente, accusamus.</p>
+
+				<form action="#">
+					<label for="pizzaSize">Size</label>
+					<select name="pizzaSize" id="pizzaSize">
+						<option value="small">Small</option>
+						<option value="medium">Medium</option>
+						<option value="large">Large</option>
+						<option value="massive">Massive</option>
+					</select>
+
+					<br/>
+
+					<label for="pizzaSize">Dough</label>
+					<select name="pizzaSize" id="pizzaSize">
+						<option value="deep">Deep pan</option>
+						<option value="italian">Italian</option>
+						<option value="wholemeal">Wholemeal</option>
+						<option value="crisp">Crisp</option>
+						<option value="cheesy">Cheesy</option>
+					</select>
+
+
+				</form>
+
+
+			</div>
+
+		</div>
+	</main>
+  
+	<footer>
+		<h2> Authentic Italian Pizza</h2>
+
+		<h3>Call: 35 39 50 12<br>11:00 AM - 10:00 PM
+			<img class="facebook" src="facebooklogo.png">
+		</h3>
+
+		<ul>
+			<li><a href="https://www.facebook.com/fornoalegnaKBH/" target="_blank" class="social facebook">Facebook</a></li>
+		</ul>
+		<p class="copyright">Copyright 2018, Forno a Lenga Pizzeria</p>
+	</footer>
+  
+
+	<script>
+
+		window.onscroll = function() {myFunction()};
+
+		var navbar = document.getElementById("navbar");
+		var sticky = navbar.offsetTop;
+
+		function myFunction() {
+		  if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		  } else {
+			navbar.classList.remove("sticky");
+		  }
+		}
+
+	</script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+  </html>
