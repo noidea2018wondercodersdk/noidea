@@ -33,6 +33,9 @@
 				<div class="col-12 col-md-6">
 					<img src="pizzaoven.jpg" alt="Pizza picture">
 				</div>
+                
+                <form action="product-page.html" class="tab" method="post" name="f1"> 
+
 
 				<div class="col-12 col-md-6">
 					<h4>Banana pizza</h4>
@@ -50,8 +53,8 @@
 
 						<br/>
 
-						<label for="pizzaSize">Dough</label>
-						<select name="pizzaSize" id="pizzaSize">
+						<label for="pizzaDough">Dough</label>
+						<select name="pizzaDough" id="pizzaDough" onselect="totalPrice()" >
 							<option value="deep">Deep pan - $3</option>
 							<option value="italian">Italian - $1</option>
 							<option value="wholemeal">Wholemeal - $5</option>
@@ -62,38 +65,45 @@
 
 						<p><strong>Extra Topping</strong></p>
 						
-						<div class="topping-list">
+						<div class="toppingList">
 							<label for="toppingBacon">
-								<input type="checkbox" id="toppingBacon">
+								<input type="checkbox" id="toppingBacon" name="toppings" onclick="totalPrice()">
 								Bacon - $3
 							</label>
 
 							<label for="toppingMushrooms">
-								<input type="checkbox" id="toppingMushrooms">
+								<input type="checkbox" id="toppingMushrooms" name="toppings" onclick="totalPrice();">
 								Mushrooms - $5
 							</label>
 
 							<label for="toppingPepper">
-								<input type="checkbox" id="toppingPepper">
+								<input type="checkbox" id="toppingPepper" name="toppings" onclick="totalPrice();">
 								Pepper - $1
 							</label>
 
 							<label for="toppingAnanas">
-								<input type="checkbox" id="toppingAnanas">
+								<input type="checkbox" id="toppingAnanas" name="toppings" onclick="totalPrice();">
 								Ananas - $7
 							</label>
 
-							<label for="">
-								<input type="checkbox">
-								Extra tomato - $2
+							<label for="toppingTomato">
+								<input type="checkbox" id="extraTomato" name="toppings" onclick="totalPrice();">
+								Extra Tomato - $2
 							</label>
 						</div>
 					</form>
 				</div>
 
-				<div class="col-xs-12 text-center">
+				<!-- <div class="col-xs-12 text-center">
 					<button class="btn order-button">Order (total <span class="total-value">$ 8</span>)</button>
-				</div>
+				</div> -->
+
+                <div>
+				<h3>Total</h3>
+				<p><input type="text" name=Total value="0"><br /> </p>
+				<input type="submit" value="submit" /> <input type ="reset">
+				</form>
+                </div>
 
 			</div>
 		</main>
@@ -126,6 +136,47 @@
 				navbar.classList.remove("sticky");
 			  }
 			}
+
+			function totalPrice() 
+			{
+			    var total = 0;
+			    var small = 5.0;
+			    var medium = 10.0;
+			    var large = 15.0;
+			    var massive = 20.0;
+
+			    // var deep = 3.0;
+			    // var italian= 1.0;
+			    // var wholemeal = 5.0;
+			    // var crisp = 1.0;
+			    // var cheese = 3.0;
+			    // var addTop = 0;
+
+
+
+			    if(document.forms[0].pizzaSize[0].pizzaDough[0].checked == true) {
+			        total += small;
+			    }
+			    else if(document.forms[0].pizzaSize[1].pizzaDough[1].checked == true){
+			        total += medium;
+			    }
+			    else if(document.forms[0].pizzaSize[2].pizzaDough[2].checked == true){
+			        total += large;
+			    }
+			      else if(document.forms[0].pizzaSize[3].pizzaDough[3].checked == true){
+			        total += massive;
+			    }
+			    
+                for(var j=0; j<4; j++){
+				    for(var i = 0; i < 4; i++){
+				        if(document.forms[0].pizzaDough[j].toppingList[i].checked == true){
+				            total += addTop;
+						}
+				    }
+				    document.f1.Total.value = total;
+			}
+		}
+
 		</script>
 
 		<!-- Latest compiled and minified JavaScript -->
