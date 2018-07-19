@@ -48,15 +48,15 @@ function totalPrice() {
 			total += 3;
 	}
 
-
 	for( var i = 0; toppings[i]; ++i ){
 
 		if(toppings[i].checked){
 			total += parseInt(toppings[i].value);
-			break;
 		}
 	}
 
-	console.log(total);
 
+	document.getElementsByClassName('total-value')[0].innerHTML = "$" + total;
+
+	console.log(total);
 }
