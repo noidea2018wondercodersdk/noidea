@@ -225,6 +225,11 @@ body {
 }
 
 
+
+
+
+/* Product page stylings */
+
 .product-page {
   margin-top: 60px;
   margin-bottom: 60px;
@@ -239,5 +244,32 @@ select {
   height: 35px;
   border-radius: 0;
   margin-bottom: 20px;
-  appearance: none;
+}
+
+.topping-list {
+
+}
+
+.topping-list label {
+  width: 160px;
+  display: inline-block;
+  font-weight: normal;
+}
+
+.topping-list input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+
+.order-button {
+  margin-top: 50px;
+  width: 240px;
+  background-color: #CD3333;
+  color: white;
+  border: 1px solid #CD3333;
+}
+
+.order-button:hover {
+  background-color: white;
+  color: #CD3333;
 }
