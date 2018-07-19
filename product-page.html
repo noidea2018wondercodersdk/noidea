@@ -41,7 +41,7 @@
 
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore error reiciendis neque, adipisci perspiciatis dolor in et repudiandae animi placeat deleniti similique officiis velit laborum earum non, alias eligendi architecto dicta tenetur ad. Tempore sit quo illo amet sapiente, accusamus.</p>
 
-	                <form action="product-page.html" class="tab" method="post" name="f1"> 
+	                
 						<label for="pizzaSize">Size</label>
 						<select name="pizzaSize" id="pizzaSize" onchange="totalPrice()">
 							<option value="small">Small - $5</option>
@@ -66,31 +66,30 @@
 						
 						<div class="toppingList">
 							<label for="toppingBacon">
-								<input type="checkbox" id="toppingBacon" name="toppings" onclick="totalPrice()">
+								<input type="checkbox" id="toppingBacon" name="toppings" value="3" onclick="totalPrice()">
 								Bacon - $3
 							</label>
 
 							<label for="toppingMushrooms">
-								<input type="checkbox" id="toppingMushrooms" name="toppings" onclick="totalPrice();">
+								<input type="checkbox" id="toppingMushrooms" name="toppings" value="5" onclick="totalPrice();">
 								Mushrooms - $5
 							</label>
 
 							<label for="toppingPepper">
-								<input type="checkbox" id="toppingPepper" name="toppings" onclick="totalPrice();">
+								<input type="checkbox" id="toppingPepper" name="toppings" value="1" onclick="totalPrice();">
 								Pepper - $1
 							</label>
 
 							<label for="toppingAnanas">
-								<input type="checkbox" id="toppingAnanas" name="toppings" onclick="totalPrice();">
+								<input type="checkbox" id="toppingAnanas" name="toppings" value="7" onclick="totalPrice();">
 								Ananas - $7
 							</label>
 
 							<label for="toppingTomato">
-								<input type="checkbox" id="extraTomato" name="toppings" onclick="totalPrice();">
+								<input type="checkbox" id="extraTomato" name="toppings" value="2" onclick="totalPrice();">
 								Extra Tomato - $2
 							</label>
 						</div>
-					</form>
 				</div>
 
 				<!-- <div class="col-xs-12 text-center">

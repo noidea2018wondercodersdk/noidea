@@ -61,8 +61,15 @@
 				total += 3;
 		}
 
+		var totalTop = document.getElementByName("toppings")
+
+		for each(var topping in toppings){
+			total += topping;
+		}
 
 		console.log(total);
+
+
 
 
 		// if(document.forms[0].pizzaSize[0].pizzaDough[0].checked == true) {
