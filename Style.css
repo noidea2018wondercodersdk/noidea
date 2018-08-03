@@ -82,6 +82,7 @@ header .logo-image {
 header .logo-image:hover {
   transform: scale(1.2) rotate(360deg);
 }
+
 .tag {
   background-color: orange;
   color: white;
